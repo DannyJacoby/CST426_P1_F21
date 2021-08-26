@@ -5,8 +5,8 @@ The first project in a trio of projects for CST 426 (Game Design) at CSU Montere
 # Game Design Document
 ## Team Members: 
 ### Daniel Jacoby, Roles:
-### Name 2, Roles:
-### Name 3, Roles:
+### Phillip Giourousis, Roles:
+### Raul Ramirez, Roles:
 ### Name 4, Roles:
 
 
