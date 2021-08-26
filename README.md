@@ -1,6 +1,26 @@
 # CST426_P1_F21
 The first project in a trio of projects for CST 426 (Game Design) at CSU Monterey Bay
 
+
 # Game Design Document
 ## Team Members: 
-### Daniel Jacoby, Name 2, Name 3, Name 4
+### Daniel Jacoby, Roles:
+### Name 2, Roles:
+### Name 3, Roles:
+### Name 4, Roles:
+
+
+## Game Description:
+
+## Simulation Description:
+
+## Currency Used:
+
+## Problem/Question:
+
+## Command Pattern:
+### What Command Pattern:
+
+### How will we use it:
+
+
