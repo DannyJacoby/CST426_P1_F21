@@ -7,7 +7,7 @@ The first project in a trio of projects for CST 426 (Game Design) at CSU Montere
 ### Daniel Jacoby, Roles:
 ### Phillip Giourousis, Roles:
 ### Raul Ramirez, Roles:
-### Name 4, Roles:
+### Scott Coonis, Roles:
 
 
 ## Game Description:
