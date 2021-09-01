@@ -5,7 +5,7 @@ The first project in a trio of projects for CST 426 (Game Design) at CSU Montere
 ## Team Members: 
 ### Daniel Jacoby, Roles:
 ### Phillip Giourousis, Roles:
-### Raul Ramirez, Roles:
+### Raul Ramirez, Roles:Note Taker
 ### Scott Coonis, Roles:
 
 
@@ -24,4 +24,8 @@ We want to see if we can help increase your memory, and that if we can train you
 ## What Command Pattern:
 We will be implimenting a way to manage what spot of the lake you will be fishing in.
 
+## TO DO Next: 
+- Finish and Record Design Document ( scheduled : Sep 1 @ 6pm ) 
+- Push and Pull test (asap) 
+- Protoype ( by Sep 9th ) 
 
