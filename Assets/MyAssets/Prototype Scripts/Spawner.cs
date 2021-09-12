@@ -6,10 +6,10 @@ public class Spawner : MonoBehaviour
 {
     public GameObject fish;
     bool canSpawnn = true;
-
+    
    void Spawn()
-    {
-        Instantiate(fish, transform.position, transform.rotation);
+   {
+       Instantiate(fish, transform.position, transform.rotation);
     }
     //Spawn more fish on a timer 
    IEnumerator NewFish()
@@ -19,7 +19,6 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(2f);
         canSpawnn = true;
 
-      
     }
     private void Update()
     {
