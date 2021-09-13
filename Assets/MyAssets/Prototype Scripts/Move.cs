@@ -5,10 +5,13 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float speed = 1f;
+    
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0, Space.Self);
+     
+     transform.Translate(speed * Time.deltaTime, 0, 0, Space.Self);
+      
     }
 }
