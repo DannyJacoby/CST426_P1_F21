@@ -6,10 +6,18 @@ public class Spawner : MonoBehaviour
 {
     public GameObject fish;
     bool canSpawnn = true;
-    
-   void Spawn()
+    string[] colors =
    {
-       Instantiate(fish, transform.position, transform.rotation);
+        "red",
+        "blue",
+        "yellow",
+        "black"
+    };
+    void Spawn()
+   {
+       var temp = Instantiate(fish, transform.position, transform.rotation);
+       Renderer rend = temp.GetComponent<Renderer>();
+       rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
     }
     //Spawn more fish on a timer 
    IEnumerator NewFish()
