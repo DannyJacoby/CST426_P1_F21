@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2523892218612505420}
   - component: {fileID: 2523892218612505423}
-  - component: {fileID: 2523892218612505421}
+  - component: {fileID: 8541393805859881333}
   m_Layer: 0
   m_Name: Shredder
   m_TagString: Untagged
@@ -45,7 +45,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2523892218612505421
+--- !u!114 &8541393805859881333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,6 +54,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2523892218612505422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc322df14bfc42efa8dccdb04570827, type: 3}
+  m_Script: {fileID: 11500000, guid: b3e5437ce71e5421fbafed8d5db63a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

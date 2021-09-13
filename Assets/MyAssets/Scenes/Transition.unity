@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453086725819782704, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
       propertyPath: numberOfFish
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1453086725819782705, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
       propertyPath: m_Name

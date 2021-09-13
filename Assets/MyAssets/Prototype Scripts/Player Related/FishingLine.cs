@@ -7,9 +7,12 @@ public class FishingLine : MonoBehaviour
     public Vector3 target;
     LineRenderer line;
 
+    List<string> fishList = LevelGenerator.fishList;//get fish list 
+
     private void Awake()
     {
         line = GetComponent<LineRenderer>();
+       
     }
 
     private void Update()
@@ -24,6 +27,7 @@ public class FishingLine : MonoBehaviour
         }
     }
 
+    int index = 0;
     void Shoot()
     {
         Plane plane = new Plane(Vector3.back, 0);
@@ -41,7 +45,18 @@ public class FishingLine : MonoBehaviour
         if(Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.transform.CompareTag("Fish"))
             {
-                Destroy(hit.transform.gameObject);
+                string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
+                string[] input = caught.Split();
+                if (input[0].CompareTo(fishList[index])==0)
+                {
+                    print("MATCH!");
+                    index++;
+                }
+                else
+                {
+                    print(caught + " Does Not Equal " + fishList[index]);
+                }
+               
             }
         }
     }
