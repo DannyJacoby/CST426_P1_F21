@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -81,12 +81,22 @@ public class LevelGenerator : MonoBehaviour
             float step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, transform.position.y, transform.position.z), step);
         }
+        if(transform.position.x == 0)
+        {
+            StartCoroutine(LoadGame());
+        }
         
     }
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(.1f * numberOfFish);
         start = true;
+    }
+    IEnumerator LoadGame()
+    {
+        yield return new WaitForSeconds(1);
+        Debug.Log("Loading new scene called FishingLevel");
+        SceneManager.LoadScene("FishingLevel");
     }
     
 
