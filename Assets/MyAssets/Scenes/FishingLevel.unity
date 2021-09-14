@@ -311,6 +311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004534304}
     m_Modifications:
+    - target: {fileID: 4275066652087443278, guid: c4345ffbcfc8cc945bb35cbfd2409f5a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7890200977569509778, guid: c4345ffbcfc8cc945bb35cbfd2409f5a, type: 3}
       propertyPath: m_Name
       value: boat-fishing
@@ -755,9 +759,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0

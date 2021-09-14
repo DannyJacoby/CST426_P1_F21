@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     {
         canSpawnn = false;
         Spawn();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         canSpawnn = true;
 
     }
