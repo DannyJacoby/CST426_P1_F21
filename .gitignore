@@ -75,3 +75,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Build-Dev/CST426-P1-F21_Data/ScriptingAssemblies.json
+Build-Dev/CST426-P1-F21.exe
