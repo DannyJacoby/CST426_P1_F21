@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
-
     [SerializeField] GameObject fish;
     Vector3 spawn;
 
@@ -96,5 +95,4 @@ public class LevelGenerator : MonoBehaviour
         SceneManager.LoadScene("FishingLevel");
     }
     
-
 }

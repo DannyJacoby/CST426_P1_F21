@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class LevelGenerator : MonoBehaviour
+public class TransitionLvlGen : MonoBehaviour
 {
     [SerializeField] GameObject fish;
     Vector3 spawn;
