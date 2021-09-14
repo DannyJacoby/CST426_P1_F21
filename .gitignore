@@ -1,6 +1,7 @@
 # Ignoring Ocean asset from now on, as the vertices change upon each play cycle
 Assets\LowPolyWater_Pack\Plane Meshes\Ocean50x50W750H750.asset
-
+Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset
+Assets/LowPolyWater_Pack/
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
