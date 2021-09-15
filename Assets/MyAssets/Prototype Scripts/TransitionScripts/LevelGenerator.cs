@@ -12,7 +12,7 @@ public class LevelGenerator : MonoBehaviour
     public int numberOfFish = 1;
     public float speed = 5;
 
-    float displacement = 2f;
+    float displacement = 4f;
     bool start = false;
 
     string[] colors =
@@ -26,7 +26,7 @@ public class LevelGenerator : MonoBehaviour
         "black"     //6
     };
 
-    List<string> fishList;
+    public static List<string> fishList;
 
 
     private void Awake()
@@ -68,7 +68,7 @@ public class LevelGenerator : MonoBehaviour
             Destroy(temp.GetComponent<Move>()); //take away move behaviour
 
             //render its color
-            Renderer rend = temp.GetComponent<Renderer>();
+            Renderer rend = temp.transform.GetChild(0).transform.GetComponent<Renderer>();
             rend.material = Resources.Load<Material>(fishList[i]);
 
             temp.transform.parent = gameObject.transform;
