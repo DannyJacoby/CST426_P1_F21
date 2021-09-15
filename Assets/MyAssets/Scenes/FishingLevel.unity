@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37574023, g: 0.6143987, b: 0.8668557, a: 1}
+  m_IndirectSpecularColor: {r: 0.5019536, g: 0.5019536, b: 0.5019536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &304759257 stripped
@@ -264,6 +268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &419381470 stripped
@@ -315,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7890200977566576018, guid: c4345ffbcfc8cc945bb35cbfd2409f5a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6252620553795950739, guid: 85311e6682d3a4cc097f92f64677423b, type: 3}
     - target: {fileID: 7890200977569509778, guid: c4345ffbcfc8cc945bb35cbfd2409f5a, type: 3}
       propertyPath: m_Name
       value: boat-fishing
@@ -437,6 +449,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &667459884 stripped
@@ -880,6 +896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &1122970797 stripped
@@ -1051,6 +1071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &1289106701 stripped
@@ -1125,6 +1149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &1459438028 stripped
@@ -1199,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33148888949017918, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 5095216605442050146, guid: 40073383e7a2b4cacbf263bebe125b75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37bf6b4eaddee8d448771b63238e03d1, type: 3}
 --- !u!4 &1537047909 stripped
