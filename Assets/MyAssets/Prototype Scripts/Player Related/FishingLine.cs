@@ -30,6 +30,7 @@ public class FishingLine : MonoBehaviour
         {
             line.enabled = false;//unrender line 
         }
+        if (Input.GetKey("escape")) Application.Quit();
     }
 
     int index = 0;
