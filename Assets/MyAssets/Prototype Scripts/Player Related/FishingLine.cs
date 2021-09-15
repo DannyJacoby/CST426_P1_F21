@@ -8,11 +8,14 @@ public class FishingLine : MonoBehaviour
     public Vector3 target;
     LineRenderer line;
 
+    static public int nextAmount = 4;
+
     List<string> fishList = LevelGenerator.fishList;//get fish list 
 
     private void Awake()
     {
         line = GetComponent<LineRenderer>();
+        nextAmount = fishList.Capacity + 4;
        
     }
 

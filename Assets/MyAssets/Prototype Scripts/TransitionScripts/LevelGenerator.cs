@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] GameObject fish;
     Vector3 spawn;
 
-    public int numberOfFish = 1;
+    static public int numberOfFish = 4;
     public float speed = 5;
 
     float displacement = 4f;
@@ -28,11 +28,13 @@ public class LevelGenerator : MonoBehaviour
 
     private void Awake()
     {
+        if (FishingLine.nextAmount > numberOfFish)
+            numberOfFish = FishingLine.nextAmount;
         //adjust speed dependent on number of fish
         speed -= ((numberOfFish - 1) / speed);
 
         //scale gameObject to fit all fish
-        transform.localScale = new Vector3(numberOfFish * displacement, 1, 1);
+        transform.localScale = new Vector3(numberOfFish * displacement*2, 1, 1);
         
         //adjust location
         float zeta = numberOfFish / displacement;
