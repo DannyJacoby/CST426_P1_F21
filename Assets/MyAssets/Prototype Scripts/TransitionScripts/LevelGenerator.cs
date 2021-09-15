@@ -34,10 +34,10 @@ public class LevelGenerator : MonoBehaviour
         speed -= ((numberOfFish - 1) / speed);
 
         //scale gameObject to fit all fish
-        transform.localScale = new Vector3(numberOfFish * displacement*2, 1, 1);
+        transform.localScale = new Vector3(numberOfFish * displacement, 1, 1);
         
         //adjust location
-        float zeta = numberOfFish / displacement;
+        float zeta = numberOfFish;
         transform.position = new Vector3(12 + (displacement * numberOfFish), 0, zeta);
         
         //set spawn locatiom

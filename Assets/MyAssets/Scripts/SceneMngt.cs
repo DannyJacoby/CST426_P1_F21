@@ -7,10 +7,7 @@ using System.Linq;
 public class SceneMngt : MonoBehaviour
 {
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
