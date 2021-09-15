@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject fish;
-    Vector3 spawn;
+    [SerializeField] GameObject fish;//object to spawn 
+    Vector3 spawn;//inital spawn location 
 
-    static public int numberOfFish = 4;
-    public float speed = 5;
+    static public int numberOfFish = 4;//how many objects to spawn
+    public float speed = 5;//how fast to move into scene
 
-    float displacement = 4f;
-    bool start = false;
+    float displacement = 4f;//how far apart each object will be 
+    bool start = false;//delay start moving into frame 
 
     string[] colors =
     {
@@ -28,8 +28,13 @@ public class LevelGenerator : MonoBehaviour
 
     private void Awake()
     {
+        //Fishingline script found in the fishing levels scene, If
+        //next amount is greater it means we previously won set new
+        //amount. if equal we equal its the first time starting game 
         if (FishingLine.nextAmount > numberOfFish)
             numberOfFish = FishingLine.nextAmount;
+
+
         //adjust speed dependent on number of fish
         speed -= ((numberOfFish - 1) / speed);
 
@@ -58,7 +63,8 @@ public class LevelGenerator : MonoBehaviour
         SpawnAllFish();
     }
 
-
+    //spawn fish and child into LevelGenerator game object inorder to move only
+    //one thing into place rather than all the fish
     void SpawnAllFish()
     {
         for (int i = 0; i < numberOfFish; i++)
@@ -84,6 +90,7 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
+            //move level generator game object until centered on scene 
             float step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, transform.position.y, transform.position.z), step);
         }
