@@ -17,13 +17,10 @@ public class LevelGenerator : MonoBehaviour
 
     string[] colors =
     {
-        "red",      //0
-        "blue",     //1
-        "green",    //2
-        "yellow",   //3
-        "cyan",     //4
-        "orange",   //5
-        "black"     //6
+        "red",      
+        "blue",     
+        "yellow",   
+        "black"     
     };
 
     public static List<string> fishList;

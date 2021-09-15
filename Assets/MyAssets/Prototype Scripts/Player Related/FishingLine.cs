@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishingLine : MonoBehaviour
 {
@@ -45,12 +46,18 @@ public class FishingLine : MonoBehaviour
         if(Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.transform.CompareTag("Fish"))
             {
+                
                 string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
                 string[] input = caught.Split();
                 if (input[0].CompareTo(fishList[index])==0)
                 {
                     print("MATCH!");
                     index++;
+                    Destroy(hit.transform.gameObject);
+                    if(index == fishList.Capacity)
+                    {
+                        StartCoroutine(LoadScene());
+                    }
                 }
                 else
                 {
@@ -59,6 +66,12 @@ public class FishingLine : MonoBehaviour
                
             }
         }
+    }
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(1);
+        Debug.Log("Loading new scene called FishingLevel");
+        SceneManager.LoadScene("Transition");
     }
 
 }

@@ -16,15 +16,15 @@ public class Spawner : MonoBehaviour
     void Spawn()
    {
        var temp = Instantiate(fish, transform.position, transform.rotation);
-       Renderer rend = temp.GetComponent<Renderer>();
-       rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
+       Renderer rend = temp.transform.GetChild(0).transform.GetComponent<Renderer>();
+        rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
     }
     //Spawn more fish on a timer 
    IEnumerator NewFish()
     {
         canSpawnn = false;
         Spawn();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         canSpawnn = true;
 
     }
