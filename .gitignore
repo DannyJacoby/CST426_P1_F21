@@ -1,7 +1,7 @@
 # Ignoring Ocean asset from now on, as the vertices change upon each play cycle
 +Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset
 
-# Ignoring Build Version of Game
+# Ignore the Built version of the game
 +Build-Dev/
 
 # This .gitignore file should be placed at the root of your Unity project directory
@@ -75,5 +75,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset
-Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset
+Build-Dev/CST426-P1-F21_Data/ScriptingAssemblies.json
+Build-Dev/CST426-P1-F21.exe
