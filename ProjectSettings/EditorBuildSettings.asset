@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Scenes/FishingLevel.unity
     guid: 83a274e39ef7e114782f89ecc577e947
-  - enabled: 1
-    path: Assets/MyAssets/Scenes/Transition.unity
-    guid: 02f87ca4a2f944b4a9c6aa4bf42d2d24
+  - enabled: 0
+    path: Assets/MyAssets/Scenes/Game_Prototype.unity
+    guid: 7ec4123a2595b4d4bb196a51bb65ada3
   m_configObjects: {}

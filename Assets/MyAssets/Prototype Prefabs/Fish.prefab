@@ -132,44 +132,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.46512613
+      value: 2.0628474
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5596054
+      value: 2.431104
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3068945
+      value: -2.9518511
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.056435432
+      value: -0.15103906
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.78822523
+      value: 0.09799801
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.12332573
+      value: 0.03948061
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6002556
+      value: -0.98286575
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 177.248
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 168.182
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -17.757996
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea790175a9ee85e4896b2419eefb3126, type: 2}
     - target: {fileID: 919132149155446097, guid: f5cf722ef9344d14b90dc1d289add533, type: 3}
       propertyPath: m_Name
       value: Tuna
