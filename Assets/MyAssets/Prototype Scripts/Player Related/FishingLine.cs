@@ -15,9 +15,11 @@ public class FishingLine : MonoBehaviour
 
     private void Awake()
     {
-         line = GetComponent<LineRenderer>();
-        if (fishList.Capacity == 0)
+        
+        line = GetComponent<LineRenderer>();
+        if (fishList == null)
         {//for testing purposes
+            fishList = new List<string>(4);
             fishList.Add("blue");
             fishList.Add("blue");
             fishList.Add("blue");
