@@ -10,19 +10,27 @@ public class FishingLine : MonoBehaviour
 
     static public int nextAmount = 4;//initial amount when starting game
 
-    List<string> fishList = LevelGenerator.fishList;//get fish list from LevelGeneartor
+    List<string> fishList = LevelGenerator.fishList;
+
 
     private void Awake()
     {
-        line = GetComponent<LineRenderer>();
-        nextAmount = fishList.Capacity + 4;//we update the list by four each time
-       
+         line = GetComponent<LineRenderer>();
+        if (fishList.Capacity == 0)
+        {//for testing purposes
+            fishList.Add("blue");
+            fishList.Add("blue");
+            fishList.Add("blue");
+            fishList.Add("blue");
+        }
+        nextAmount = fishList.Capacity + 4;
+
     }
 
     private void Update()
     {
         //player input 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetAxisRaw("Fire1") != 0)
         {
             Shoot();
         }
@@ -60,6 +68,7 @@ public class FishingLine : MonoBehaviour
                 if (input[0].CompareTo(fishList[index])==0)
                 {
                     print("MATCH!");
+                
                     index++;
                     Destroy(hit.transform.gameObject);
                     if(index == fishList.Capacity)
@@ -84,5 +93,12 @@ public class FishingLine : MonoBehaviour
         Debug.Log("Loading new scene called FishingLevel");
         SceneManager.LoadScene("Transition");
     }
-
+    public int fishCaught()
+    {
+        return index;
+    }
+    public int fishNeeded()
+    {
+        return fishList.Capacity;
+    }
 }
