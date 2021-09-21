@@ -15,7 +15,7 @@ public class FishingLine : MonoBehaviour
     private void Awake()
     {
         line = GetComponent<LineRenderer>();
-        nextAmount = fishList.Capacity + 4;//we update the list by four each time
+        nextAmount = fishList.Capacity + 4;//we update the list by four each time // returning nullreferenceexception
        
     }
 
