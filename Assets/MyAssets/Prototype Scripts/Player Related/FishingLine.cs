@@ -36,7 +36,7 @@ public class FishingLine : MonoBehaviour
         {
             Shoot();
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetAxisRaw("Fire1") == 0)
         {
             line.enabled = false;//unrender line 
         }
