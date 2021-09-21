@@ -27,6 +27,7 @@ public class FishingLine : MonoBehaviour
         }
         nextAmount = fishList.Capacity + 4;
 
+
     }
 
     private void Update()
@@ -83,8 +84,11 @@ public class FishingLine : MonoBehaviour
                 {
                     //end scene goes somewhere here
                     print(caught + " Does Not Equal " + fishList[index]);
+
+                    SceneManager.LoadScene("EndScene");
+
                 }
-               
+
             }
         }
     }
