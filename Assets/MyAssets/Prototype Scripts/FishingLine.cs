@@ -84,8 +84,11 @@ public class FishingLine : MonoBehaviour
                 {
                     //end scene goes somewhere here
                     print(caught + " Does Not Equal " + fishList[index]);
+
+                    SceneManager.LoadScene("EndScene");
+
                 }
-               
+
             }
         }
     }
