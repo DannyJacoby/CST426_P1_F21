@@ -27,6 +27,7 @@ public class FishingLine : MonoBehaviour
         }
         nextAmount = fishList.Capacity + 4;
 
+
     }
 
     private void Update()
