@@ -6,6 +6,8 @@ using System.Linq;
 
 public class SceneMngt : MonoBehaviour
 {
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

@@ -10,26 +10,37 @@ public class FishingLine : MonoBehaviour
 
     static public int nextAmount = 4;//initial amount when starting game
 
-    List<string> fishList = LevelGenerator.fishList;//get fish list from LevelGeneartor
+    List<string> fishList = LevelGenerator.fishList;
+
 
     private void Awake()
     {
+        
         line = GetComponent<LineRenderer>();
-        nextAmount = fishList.Capacity + 4;//we update the list by four each time
-       
+        if (fishList == null)
+        {//for testing purposes
+            fishList = new List<string>(4);
+            fishList.Add("blue");
+            fishList.Add("blue");
+            fishList.Add("blue");
+            fishList.Add("blue");
+        }
+        nextAmount = fishList.Capacity + 4;
+
     }
 
     private void Update()
     {
         //player input 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetAxisRaw("Fire1") != 0)
         {
             Shoot();
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetAxisRaw("Fire1") == 0)
         {
             line.enabled = false;//unrender line 
         }
+        if (Input.GetKey("escape")) Application.Quit();
     }
 
     int index = 0;
@@ -52,14 +63,14 @@ public class FishingLine : MonoBehaviour
         if(Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.transform.CompareTag("Fish"))
             {
-
+                
                 string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
-                print(caught);
                 string[] input = caught.Split();
                 //compare said fish to our target list in order
                 if (input[0].CompareTo(fishList[index])==0)
                 {
                     print("MATCH!");
+                
                     index++;
                     Destroy(hit.transform.gameObject);
                     if(index == fishList.Capacity)
@@ -84,5 +95,12 @@ public class FishingLine : MonoBehaviour
         Debug.Log("Loading new scene called FishingLevel");
         SceneManager.LoadScene("Transition");
     }
-
+    public int fishCaught()
+    {
+        return index;
+    }
+    public int fishNeeded()
+    {
+        return fishList.Capacity;
+    }
 }
