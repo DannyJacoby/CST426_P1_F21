@@ -8,6 +8,7 @@ public class FishingLine : MonoBehaviour
     public Vector3 target;//fishing line target
     LineRenderer line;
 
+    public GameObject particles;
     static public int nextAmount = 4;//initial amount when starting game
 
     List<string> fishList = LevelGenerator.fishList;
@@ -25,7 +26,7 @@ public class FishingLine : MonoBehaviour
             fishList.Add("blue");
             fishList.Add("blue");
         }
-        nextAmount = fishList.Capacity + 4;
+        nextAmount = fishList.Capacity + 1;
 
 
     }
@@ -59,12 +60,14 @@ public class FishingLine : MonoBehaviour
             line.SetPosition(0, transform.position);
             line.SetPosition(1, target);
             line.enabled = true;
+            //Instantiate(particles, target, Quaternion.identity);
         }
         //check if where we click theres a fish 
         if(Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.transform.CompareTag("Fish"))
             {
-                
+                Instantiate(particles, target, Quaternion.identity);
+                Destroy(hit.transform.gameObject);
                 string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
                 string[] input = caught.Split();
                 //compare said fish to our target list in order
@@ -73,7 +76,7 @@ public class FishingLine : MonoBehaviour
                     print("MATCH!");
                 
                     index++;
-                    Destroy(hit.transform.gameObject);
+                    ;
                     if(index == fishList.Capacity)
                     {
                         StartCoroutine(WinScene());
