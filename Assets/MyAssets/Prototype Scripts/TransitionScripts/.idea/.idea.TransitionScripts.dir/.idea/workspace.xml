@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7c335906-a6e8-454f-9990-c8170c526e17" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../../LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prototype Prefabs/LevelGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../../Prototype Prefabs/LevelGenerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes/EndScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scenes/EndScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scenes/FishingLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scenes/FishingLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TransitionLvlGen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Player Related/FishingLine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LevelGenerator.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1y8oy68YUN4x4SKnkRvOBnymPIm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,7 +36,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
