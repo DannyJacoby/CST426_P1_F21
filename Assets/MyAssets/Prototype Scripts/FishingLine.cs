@@ -60,12 +60,13 @@ public class FishingLine : MonoBehaviour
             line.SetPosition(0, transform.position);
             line.SetPosition(1, target);
             line.enabled = true;
-            Instantiate(particles, target, Quaternion.identity);
+            //Instantiate(particles, target, Quaternion.identity);
         }
         //check if where we click theres a fish 
         if(Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.transform.CompareTag("Fish"))
             {
+                Instantiate(particles, target, Quaternion.identity);
                 Destroy(hit.transform.gameObject);
                 string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
                 string[] input = caught.Split();
