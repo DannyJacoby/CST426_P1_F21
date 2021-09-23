@@ -26,7 +26,7 @@ public class FishingLine : MonoBehaviour
             fishList.Add("blue");
             fishList.Add("blue");
         }
-        nextAmount = fishList.Capacity + 4;
+        nextAmount = fishList.Capacity + 1;
 
 
     }
