@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
     }
     void startLevel()
     {
-        FX.playSound("sea",0.01f);
-        FX.playSound("bg1", 02f);
+        FX.playSound("sea",0.1f);
+        FX.playSound("bg1", 0.2f);
         player = GameObject.Find("Player").GetComponent<Player>();
         player.won.AddListener(delegate { SceneManager.loadNextScene(); });
         player.lost.AddListener(delegate { readyEndScene(); });
