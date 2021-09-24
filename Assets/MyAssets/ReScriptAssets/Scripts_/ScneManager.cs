@@ -32,6 +32,7 @@ public class ScneManager : MonoBehaviour
     }
     public void ExitGame()
     {
+        print("Quitting Application");
         Application.Quit();
     }
 }
@@ -40,8 +41,9 @@ public class ScneManager : MonoBehaviour
  * 
  *string prevScene = null;
  * 
- * public LoadNext()
+ * public LoadNext();
  * public getPrevScene();
+ * public ExitGame();
  * 
  * 
  * 
