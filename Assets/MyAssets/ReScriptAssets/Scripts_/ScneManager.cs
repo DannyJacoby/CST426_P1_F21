@@ -11,7 +11,10 @@ public class ScneManager : MonoBehaviour
 
     public UnityEvent sceneChange;
     public UnityEvent inTransitionScene;
+    public UnityEvent inLevelScene;
+
     bool transInvoked = false;
+    bool levelInvoked = false;
 
     public void loadNextScene()
     {
@@ -19,10 +22,17 @@ public class ScneManager : MonoBehaviour
         prevScene = SceneManager.GetActiveScene().name;
         if (SceneManager.GetActiveScene().name == "Transition")
         {
+            levelInvoked = false;
             print("Loading FishingLevel");
             SceneManager.LoadScene("FishingLevel");
         }
         if (SceneManager.GetActiveScene().name == "WelcomeScreen")
+        {
+            transInvoked = false;
+            SceneManager.LoadScene("Transition");
+            print("Loading Transition");
+        }
+        if (SceneManager.GetActiveScene().name == "FishingLevel")
         {
             transInvoked = false;
             SceneManager.LoadScene("Transition");
@@ -55,6 +65,12 @@ public class ScneManager : MonoBehaviour
         {
             inTransitionScene.Invoke();
             transInvoked = true;
+
+        }
+        if(SceneManager.GetActiveScene().name == "FishingLevel" && !levelInvoked)
+        {
+            inLevelScene.Invoke();
+            levelInvoked = true;
 
         }
     }

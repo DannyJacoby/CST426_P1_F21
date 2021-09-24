@@ -25,6 +25,7 @@ public class Generator : MonoBehaviour
 
     void reSizeParent(int cap, float displacement)
     {
+
         //scale gameObject to fit all fish
         transform.localScale = new Vector3(cap * displacement, 1, 1);
 
@@ -47,22 +48,26 @@ public class Generator : MonoBehaviour
         {
             list.Add(colors[Random.Range(0, colors.Length)]);
         }
-        reSizeParent(list.Capacity,displacement);
+        reSizeParent(list.Count,displacement);
     }
     //for user to use 
     public void addToList(List<string> otherList,int count,float displacemet)
     {
-        list = otherList;
+        list = new List<string>(otherList);
+       
+   
         for(int i = 0; i < count; i++)
         {
             list.Add(colors[Random.Range(0, colors.Length)]);
         }
-        reSizeParent(list.Capacity, displacemet);
+  
+        reSizeParent(list.Count, displacemet);
     }
 
     void instatiatList(float displacement)
     {
-        for (int i = 0; i < list.Capacity; i++)
+        
+        for (int i = 0; i < list.Count; i++)
         {
             var temp = Instantiate(prefab, spawn, Quaternion.identity);
             Destroy(temp.GetComponent<Move>()); //take away move behaviour
