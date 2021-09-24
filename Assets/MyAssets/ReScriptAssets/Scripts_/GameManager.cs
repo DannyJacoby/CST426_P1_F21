@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
 
     bool showLevel = false;
+    bool welcome = false;
 
     private void Awake()
     {
@@ -63,11 +64,14 @@ public class GameManager : MonoBehaviour
     }
     void startLevel()
     {
+        FX.playSound("sea",0.01f);
+        FX.playSound("bg1", 02f);
         player = GameObject.Find("Player").GetComponent<Player>();
         player.won.AddListener(delegate { SceneManager.loadNextScene(); });
         player.lost.AddListener(delegate { readyEndScene(); });
         player.hitFish.AddListener(delegate { FX.spawnBubble(player.GetComponentInChildren<DrawLine>().target); });
         player.setfishList(targets);
+        GameObject.Find("Canvas").GetComponent<HudManager>().upDateText(0,targets.Count);
     }
     void readyEndScene()
     {
@@ -85,12 +89,17 @@ public class GameManager : MonoBehaviour
     }
     private void updatePrevScene()
     {
-        
-        prevScene = SceneManager.getPreviousScene();
+       prevScene = SceneManager.getPreviousScene();
     }
     private void Update()
     {
         if (showLevel) LevelGenerator.moveAccross();
+        if (SceneManager.currentScene() == "WelcomeScreen" &&!welcome)
+        {
+            FX.playSound("beach",0.5f);
+            welcome = true;
+        }
+        
     }
     void leaveTransition()
     { 

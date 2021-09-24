@@ -6,21 +6,28 @@ using UnityEngine.UI;
 
 public class HudManager : MonoBehaviour
 {
-    [SerializeField] GameObject informer;
-    FishingLine data;
+    Player player = null;
 
-    TextMeshProUGUI progress;
+    TextMeshProUGUI progress = null;
     
     
     void Awake()
     {
 
         progress = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        data = informer.GetComponent<FishingLine>();
+        player = GameObject.Find("Player").GetComponent<Player>();
+        
        
     }
-    private void FixedUpdate()
+   
+    public void upDateText()
     {
-         progress.text = "Fishes Caught: " + data.fishCaught().ToString() + " / " + data.fishNeeded().ToString();
+        progress.text = "Fishes Caught: " + player.currentCount() + " / " + player.totalNeeded();
     }
+    public void upDateText(int current, int need)
+    {
+        progress.text = "Fishes Caught: " + current + " / " + need;
+
+    }
+
 }

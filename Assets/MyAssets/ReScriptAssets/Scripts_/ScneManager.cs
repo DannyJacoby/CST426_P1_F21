@@ -18,6 +18,8 @@ public class ScneManager : MonoBehaviour
     bool levelInvoked = false;
     bool endInvoked = false;
 
+
+
     public void loadNextScene()
     {
         
@@ -27,6 +29,7 @@ public class ScneManager : MonoBehaviour
             levelInvoked = false;
             print("Loading FishingLevel");
             SceneManager.LoadScene("FishingLevel");
+       
         }
         if (SceneManager.GetActiveScene().name == "WelcomeScreen")
         {
@@ -97,7 +100,10 @@ public class ScneManager : MonoBehaviour
 
         }
     }
+
 }
+
+
 /*
  * class ScneManager{
  * 
