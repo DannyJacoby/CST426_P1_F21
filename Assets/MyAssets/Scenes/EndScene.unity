@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Last 4 Fish Caught
+  m_text: Last Fish(es) Caught
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1453086725819782703, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: 1453086725819782703, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
       propertyPath: m_LocalPosition.z
@@ -446,7 +446,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelGenerator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1453086725819782704, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
 --- !u!1 &769540941
 GameObject:
@@ -514,6 +515,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944137972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1453086725819782705, guid: 884f6f32807484e4c8afd5a5ac86b046, type: 3}
+  m_PrefabInstance: {fileID: 706506776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &944137973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944137972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69c34dbd3d2849b9989728f347624b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 556826203656192676, guid: fc3a0f412e8cd4c8e843e63b7ae2359d, type: 3}
+  atCenter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1509122832
 GameObject:
   m_ObjectHideFlags: 0
