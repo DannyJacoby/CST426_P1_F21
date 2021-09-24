@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Generator : MonoBehaviour
 {
 
     [SerializeField] GameObject prefab;
     Vector3 spawn;
+
+    public UnityEvent atCenter;
 
     string[] colors =
     {
@@ -81,6 +84,14 @@ public class Generator : MonoBehaviour
     }
 
     public List<string> getList() { return list; }
+
+    private void FixedUpdate()
+    {
+        if(transform.position.x == 0)
+        {
+            atCenter.Invoke();
+        }
+    }
 
 }
 
