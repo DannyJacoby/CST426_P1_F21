@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public UnityEvent won;
     public UnityEvent lost;
+    public UnityEvent hitFish;
 
     public void setfishList(List<string> list)
     {
@@ -29,13 +30,15 @@ public class Player : MonoBehaviour
         {
             if (hit.transform.CompareTag("Fish"))
             {
+                hitFish.Invoke();
                 string materia = hit.transform.GetComponent<Renderer>().material.name.ToString();
                 string[] color = materia.Split();
                 Destroy(hit.transform.gameObject);
+                AdjustCaught(color[0]);
                 if (color[0].CompareTo(fishList[target]) == 0)
                 {
                     print("MATCH!");
-                    AdjustCaught(color[0]);
+                    
                     target++;
    
                     if (target == fishList.Count)

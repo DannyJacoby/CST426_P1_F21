@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     Generator LevelGenerator = null;
     ScneManager SceneManager = null;
+
+    FXManager FX = null;
     Player player = null;
 
 
@@ -27,8 +29,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         LevelGenerator = null;
-       
-      
+
+        FX = GetComponent<FXManager>();
         SceneManager = GameObject.Find("SceneManager").GetComponent<ScneManager>();
         SceneManager.sceneChange.AddListener(delegate { updatePrevScene(); });//Keep Track of Scene Changes
         SceneManager.inTransitionScene.AddListener(delegate { startTransition(); });
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         player.won.AddListener(delegate { SceneManager.loadNextScene(); });
         player.lost.AddListener(delegate { readyEndScene(); });
+        player.hitFish.AddListener(delegate { FX.spawnBubble(player.GetComponentInChildren<DrawLine>().target); });
         player.setfishList(targets);
     }
     void readyEndScene()
