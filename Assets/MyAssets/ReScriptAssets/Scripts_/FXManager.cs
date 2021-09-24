@@ -31,7 +31,7 @@ public class FXManager : MonoBehaviour
     public void playSound(string clip,float amps)
     {
         int i = sIndex.IndexOf(clip);
-        AudioSource.PlayClipAtPoint(sounds[i], Camera.main.transform.position, .05f);
+        AudioSource.PlayClipAtPoint(sounds[i], Camera.main.transform.position, amps);
     }
     public void click()
     {
