@@ -90,7 +90,7 @@ public class Generator : MonoBehaviour
 
     public List<string> getList() { return list; }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(transform.position.x == 0)
         {

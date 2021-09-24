@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     int target;
 
+    List<string> lastCaught = new List<string>();
+
     public UnityEvent won;
     public UnityEvent lost;
 
@@ -16,6 +18,7 @@ public class Player : MonoBehaviour
     {
         fishList = list;
         target = 0;
+
     }
 
     public void fish()
@@ -26,20 +29,41 @@ public class Player : MonoBehaviour
         {
             if (hit.transform.CompareTag("Fish"))
             {
-                print("won");
-                won.Invoke();
-                string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
-                string[] color = caught.Split();
+                string materia = hit.transform.GetComponent<Renderer>().material.name.ToString();
+                string[] color = materia.Split();
                 Destroy(hit.transform.gameObject);
-                //if (color[0].CompareTo(fishList[target]) == 0)
-                //{
-                  //  print("MATCH!");
-                  //  target++;
-                   // if (target == fishList.Capacity)
-                    //    won.Invoke();
-               // }
+                if (color[0].CompareTo(fishList[target]) == 0)
+                {
+                    print("MATCH!");
+                    AdjustCaught(color[0]);
+                    target++;
+   
+                    if (target == fishList.Count)
+                    {
+                        print("Load Next Level");
+                        won.Invoke();
+                    }
+                }
+                else
+                {
+                    print("WrongFish");
+                    lost.Invoke();
+                }
+
             }
         }
 
+    }
+    void AdjustCaught(string color)
+    {
+        lastCaught.Add(color);
+        if(lastCaught.Count == 5)
+        {
+            lastCaught.RemoveAt(0);
+        }
+    }
+    public List<string> getLastFour()
+    {
+        return lastCaught;
     }
 }

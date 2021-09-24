@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
     ScneManager SceneManager = null;
     Player player = null;
 
+
+
     string prevScene = null;
 
-     List<string> targets;
+    List<string> targets;
+
+    List<string> lastFour;
+
      int cap = 4;
      float displacement = 4f;
 
@@ -22,13 +27,15 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         LevelGenerator = null;
-        // LevelGenerator = GameObject.Find("LevelGenerator").GetComponent<Generator>();
+       
       
         SceneManager = GameObject.Find("SceneManager").GetComponent<ScneManager>();
         SceneManager.sceneChange.AddListener(delegate { updatePrevScene(); });//Keep Track of Scene Changes
         SceneManager.inTransitionScene.AddListener(delegate { startTransition(); });
         SceneManager.inLevelScene.AddListener(delegate { startLevel(); });
+        SceneManager.inEndScene.AddListener(delegate { endLevel(); });
         DontDestroyOnLoad(this.gameObject);
+
     }
 
     void startTransition()
@@ -39,7 +46,8 @@ public class GameManager : MonoBehaviour
         if (prevScene == "WelcomeScreen")
         {
             LevelGenerator.generateNewList(cap,displacement);
-            targets = LevelGenerator.getList();
+            targets = new List<string>(LevelGenerator.getList());
+            print("NEWLIST");
             
         }
         else
@@ -55,7 +63,22 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<Player>();
         player.won.AddListener(delegate { SceneManager.loadNextScene(); });
+        player.lost.AddListener(delegate { readyEndScene(); });
         player.setfishList(targets);
+    }
+    void readyEndScene()
+    {
+        lastFour = new List<string>(player.getLastFour());
+        SceneManager.loadEndScene();
+    }
+    void endLevel()
+    {
+
+        LevelGenerator = GameObject.Find("LevelGenerator").GetComponent<Generator>();
+        LevelGenerator.atCenter.AddListener(delegate { leaveTransition(); });
+        LevelGenerator.addToList(lastFour, 0, displacement);
+        showLevel = true;
+
     }
     private void updatePrevScene()
     {
@@ -67,8 +90,13 @@ public class GameManager : MonoBehaviour
         if (showLevel) LevelGenerator.moveAccross();
     }
     void leaveTransition()
-    {
+    { 
         showLevel = false;
+        if(SceneManager.currentScene() == "EndScene")
+        {
+            //avoid duplicates when loading menu
+            Destroy(GameObject.Find("GameManager"));
+        }
         SceneManager.loadNextScene();
     }
 }
