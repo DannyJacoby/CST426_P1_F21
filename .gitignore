@@ -2,7 +2,8 @@
 +Assets/LowPolyWater_Pack/Plane Meshes/Ocean50x50W750H750.asset
 
 # Ignore the Built version of the game
-+Build-Dev/
++/Build-Dev/
+/Build-Dev/
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
