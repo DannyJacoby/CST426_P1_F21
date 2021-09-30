@@ -69,8 +69,10 @@ public class FishingLine : MonoBehaviour
                 Instantiate(particles, target, Quaternion.identity);
                 Destroy(hit.transform.gameObject);
                 string caught = hit.transform.GetComponent<Renderer>().material.name.ToString();
+                Debug.Log("Caught " + caught);
                 string[] input = caught.Split();
                 //compare said fish to our target list in order
+                Debug.Log("Checking " + caught + " vs " + fishList[index]);
                 if (input[0].CompareTo(fishList[index])==0)
                 {
                     print("MATCH!");

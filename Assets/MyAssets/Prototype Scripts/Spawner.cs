@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
        var temp = Instantiate(fish, transform.position, transform.rotation);
         //change the material to a random color from our color list
        Renderer rend = temp.transform.GetChild(0).transform.GetComponent<Renderer>();
-        rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
+       rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
     }
     //Spawn more fish on a timer 
    IEnumerator NewFish()

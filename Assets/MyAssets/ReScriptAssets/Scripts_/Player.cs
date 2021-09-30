@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
                 if (hit.transform.CompareTag("Fish"))
                 {
                     hitFish.Invoke();
-                    string materia = hit.transform.GetComponent<Renderer>().material.name.ToString();
+                    string materia = hit.transform.GetChild(0).GetComponent<Renderer>().material.name.ToString();
                     string[] color = materia.Split();
                     Destroy(hit.transform.gameObject);
                     AdjustCaught(color[0]);
