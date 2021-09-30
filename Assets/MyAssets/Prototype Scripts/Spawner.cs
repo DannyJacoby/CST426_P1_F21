@@ -15,10 +15,15 @@ public class Spawner : MonoBehaviour
     };
     void Spawn()
    {
-       var temp = Instantiate(fish, transform.position, transform.rotation);
+        var temp = Instantiate(fish, transform.position, transform.rotation);
+		Vector3 rot = temp.transform.GetChild(0).rotation.eulerAngles;
+ 		rot = new Vector3(rot.x,rot.y+90,rot.z);
+		temp.transform.GetChild(0).rotation = Quaternion.Euler(rot);
+
+		
         //change the material to a random color from our color list
-       Renderer rend = temp.transform.GetChild(0).transform.GetComponent<Renderer>();
-       rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
+        Renderer rend = temp.transform.GetChild(0).transform.GetComponent<Renderer>();
+        rend.material = Resources.Load<Material>(colors[Random.Range(0, colors.Length)]);
     }
     //Spawn more fish on a timer 
    IEnumerator NewFish()
