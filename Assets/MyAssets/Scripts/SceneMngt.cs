@@ -25,11 +25,11 @@ public class SceneMngt : MonoBehaviour
     
     public void LoadScene(string sceneName)
     {
-        Debug.Log("Loading new scene called " + sceneName);
+        //Debug.Log("Loading new scene called " + sceneName);
 
         if (string.Equals(sceneName, "Quit"))
         {
-            Debug.Log("Quitting Now");
+            //Debug.Log("Quitting Now");
             Application.Quit();
             return;
         }

@@ -27,7 +27,7 @@ public class ScneManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Transition")
         {
             levelInvoked = false;
-            print("Loading FishingLevel");
+            //print("Loading FishingLevel");
             SceneManager.LoadScene("FishingLevel");
        
         }
@@ -35,19 +35,19 @@ public class ScneManager : MonoBehaviour
         {
             transInvoked = false;
             SceneManager.LoadScene("Transition");
-            print("Loading Transition");
+            //print("Loading Transition");
         }
         if (SceneManager.GetActiveScene().name == "FishingLevel")
         {
             transInvoked = false;
             SceneManager.LoadScene("Transition");
-            print("Loading Transition");
+            //print("Loading Transition");
         }
         if (SceneManager.GetActiveScene().name == "EndScene")
         {
             transInvoked = false;
             SceneManager.LoadScene("WelcomeScreen");
-            print("Loading WelcomeScreen");
+            //print("Loading WelcomeScreen");
             //Destroy to avoid duplicates
             Destroy(transform.gameObject);
         }
@@ -58,7 +58,7 @@ public class ScneManager : MonoBehaviour
     {
         endInvoked = false;
         SceneManager.LoadScene("EndScene");
-        print("Loading End");
+        //print("Loading End");
 
     }
     public string getPreviousScene()
@@ -71,7 +71,7 @@ public class ScneManager : MonoBehaviour
     }
     public void ExitGame()
     {
-        print("Quitting Application");
+        //print("Quitting Application");
         Application.Quit();
     }
     public string currentScene()

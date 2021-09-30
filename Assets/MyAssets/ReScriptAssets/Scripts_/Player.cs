@@ -43,20 +43,20 @@ public class Player : MonoBehaviour
                     AdjustCaught(color[0]);
                     if (color[0].CompareTo(fishList[target]) == 0)
                     {
-                        print("MATCH!");
+                        //print("MATCH!");
 
                         target++;
                         GameObject.Find("Canvas").GetComponent<HudManager>().upDateText();
                         if (target == fishList.Count)
                         {
-                            print("Load Next Level");
+                            //print("Load Next Level");
                             won.Invoke();
                         }
                     }
                     else
                     {
                         GameObject.Find("GameManager").GetComponent<FXManager>().playSound("wrong",0.5f);
-                        print("WrongFish");
+                        //print("WrongFish");
                         lost.Invoke();
                     }
 
